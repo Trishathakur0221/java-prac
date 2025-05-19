@@ -1,36 +1,18 @@
-class KthMaxMIN {
-   static void  max(int[] arr,int k)
-   {
-    for(int i=0;i<arr.length;i++){
-        for(int j=0;j<arr.length-i;j++)
-        {
-             if(arr[j]<arr[j+1])
-             {
-                int temp=arr[j];
-                arr[j]=arr[j+1];
-                arr[j+1]=temp;
-             }
-        }
-        
-
-        }
-        for(int i=0;i<arr.length;i++)
-        {
-            if(i==k-1)
-            {
-                System.out.println(arr[i]);
-                break;
+public class KthMaxMIN {
+    public static void main(String[] args) {
+        int arr[] = {1, 2, 3, 5, 7};
+        int k = 2;
+        int max = Integer.MIN_VALUE;
+        int min = Integer.MAX_VALUE;
+        for (int i = 0; i < arr.length; i++) {
+            if (arr[i] > max) {
+                max = arr[i];
+            }
+            if (arr[i] < min) {
+                min = arr[i];
             }
         }
-       
-    
-   }
- public static void main(String[] args) {
-    int[] arr={2,3,6,4,9,0};
-    int k=2;
-    
-    max(arr,k);
- }
-
-    
+        System.out.println("Maximum: " + max);
+        System.out.println("Minimum: " + min);
+    }
 }
