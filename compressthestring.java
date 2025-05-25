@@ -10,7 +10,7 @@ public class compressthestring {
             } else {
                 compressed.append(str.charAt(i - 1));
                 if (count > 1) {
-                    compressed.append( "="+count);
+                    compressed.append("=" + count);
                 }
                 count = 1;
             }
@@ -19,11 +19,10 @@ public class compressthestring {
         // Append the last character and its count
         compressed.append(str.charAt(str.length() - 1));
         if (count > 1) {
-            compressed.append( "="+count);
+            compressed.append("=" + count);
         }
 
-        System.out.println(compressed.toString( ));
+        System.out.println(compressed.toString());
     }
-    
-}
 
+}
